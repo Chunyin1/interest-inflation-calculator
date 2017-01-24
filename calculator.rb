@@ -6,20 +6,20 @@
 	$years_waiting_before_withdrawing = 20		#How many years you'd like to wait before withdrawing your money.
 	$years_saving_monthly = 10			#How many years would you like to spend deposit money monthly.
 
-	#Additional controls
+	#Additional variables
 	$bank_bonus = 1					#If the bank matches your money/grants bonus for early deposits. 	(Annual )
 
-	#System commands
+	#System variables
 	$adjusted = 0
 	$final = $initial
 	$i = 0
 	$amount_deposited = 0
 	$inflation_now = 1
 
-	while $i < $years_waiting_before_withdrawing do
-		if $i < $years_saving_monthly
-		$final += $monthly*$bank_bonus*12
-		$amount_deposited += $monthly*12
+  while $i < $years_waiting_before_withdrawing do
+    if $i < $years_saving_monthly
+      $final += $monthly * $bank_bonus * 12
+      $amount_deposited += $monthly * 12
 		end
 		$final = $final*$rates
 		$i += 1
